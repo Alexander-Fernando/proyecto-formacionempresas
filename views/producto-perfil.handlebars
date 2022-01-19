@@ -1,0 +1,76 @@
+{{> navegacion }}
+
+{{#if producto}}
+<div class="box-container">
+
+  <div class="box" data-id={{producto._id}} data-idautor={{producto.autor}}>
+    <div class="image-container">
+
+      {{#if producto.imgProducto}}
+        <div class="big-image">
+          <img src="{{producto.imgProducto}}" class="imagen" alt="Imagen del producto" />
+        </div>
+
+        <div class="small-image">
+          <img class="active" src="{{producto.imgProducto}}" alt="Imagen del producto" />
+          <img src="{{producto.imgProducto}}" alt="Imagen del producto" />
+          <img src="{{producto.imgProducto}}" alt="Imagen del producto" />
+        </div>
+      {{else}}
+        <div class="big-image">
+          <img src="../img/watch3.png" alt="Imagen por defecto del producto" />
+        </div>
+
+        <div class="small-image">
+          <img class="active" src="../img/watch3.png" alt="" />
+          <img src="../img/watch2.png" alt="Imagen por defecto del producto" />
+          <img src="../img/watch3.png" alt="Imagen por defecto del producto" />
+        </div>
+
+      {{/if}}
+    </div>
+
+
+    <div class="content">
+      <h3 class="title">{{producto.nombreProduc}}</h3>
+      <div class="price">S/. <span id="precioNum">{{producto.precioProduc}}</span></div>
+      <p id="descripcion">{{producto.descripcionProduc}}</p>
+
+      <form action="">
+        <div class="dropDown">
+          <span class="fw-bold"> Talla : </span>
+          <select name="Talla" id="Talla">
+            <option value="small">Pequeño (S) </option>
+            <option value="medium">Medio</option>
+            <option value="large">Largo</option>
+            <option value="extra large">Extra Largo</option>
+          </select>
+
+          <span class="fw-bold"> color : </span>
+          <select name="Color" id="Color">
+            <option value="negro">Negro</option>
+            <option value="azul">Azul</option>
+            <option value="blanco">Blanco</option>
+          </select>
+        </div>
+
+        <div class="quantity" id="autor">
+          <span class="fw-bold"> Autor : </span>
+          <a href="/perfil-usuario/{{producto.autor}}"><span>{{nombreAutor}}</span></a>
+        </div>
+      </form>
+      
+      <a href="#">
+        <button class="btn btn-agregar">
+          <i class="fas fa-shopping-cart"></i>
+          Agregar
+        </button>
+      </a>
+      <span class="stock"> <i class="fas fa-check"></i> Disponible </span>
+
+    </div>
+  </div>
+</div>
+{{else}}
+  <P>NO EXISTE ESTE PRODUCTO. REGRESE A LA PÁGINA PRINCIPAL</P>
+{{/if}}

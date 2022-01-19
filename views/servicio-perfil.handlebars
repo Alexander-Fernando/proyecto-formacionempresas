@@ -1,0 +1,72 @@
+{{> navegacion }}
+<div class="box-container">
+
+    <div class="box" data-id={{servicio._id}} data-idautor={{servicio.autor}}>
+        <div class="image-container">
+            
+            {{#if servicio.imgServicio}}
+                <div class="big-image">
+                    <img class="imagen" src="{{servicio.imgServicio}}" alt="Imagen del servicio">
+                </div>
+
+                <div class="small-image">
+                    <img class="active" src="{{servicio.imgServicio}}" alt="">
+                    <img src="{{servicio.imgServicio}}" alt="Imagen del servicio">
+                    <img src="{{servicio.imgServicio}}" alt="Imagen del servicio">
+                </div>
+            {{else}}
+                <div class="big-image">
+                    <img src="../img/watch3.png" alt="Imagen por defecto del servicio">
+                </div>
+
+                <div class="small-image">
+                    <img class="active" src="../img/watch3.png" alt="">
+                    <img src="../img/watch2.png" alt="Imagen por defecto del servicio">
+                    <img src="../img/watch3.png" alt="Imagen por defecto del servicio">
+                </div>
+            {{/if}}
+
+        </div>
+        
+
+        <div class="content">
+
+            <h3 class="title">{{servicio.nombreSer}}</h3>
+            <div class="price">S/.<span id="precioNum"> {{servicio.precio}}</span></div>
+            <p id="descripcion">{{servicio.descripcion}}</p>
+
+            <form>
+                
+                <div class="quantity">
+                    <span class="fw-bold "> Contacto : </span>
+                    <span>{{servicio.telContacto}}</span>
+                </div>
+
+                <div class="quantity">
+                    <span class="fw-bold"> Área de trabajo : </span>
+                    <span>{{servicio.lugarDel}}</span>
+                </div>
+
+                <div class="quantity">
+                    <span class="fw-bold "> Local : </span>
+                    <span>{{servicio.lugarFijo}}</span>
+                </div>
+
+                <div class="quantity">
+                    <span class="fw-bold "> Autor : </span>
+                    <a href="/perfil-usuario/{{idAutor}}"><span>{{nombreAutor}}</span></a>
+                </div>
+
+            </form>
+
+            <a href="#">
+                <button class="btn btn-agregar"> 
+                    <i class="fas fa-shopping-cart"></i> Contratar 
+                </button>
+            </a>
+
+            <span class="stock"> <i class="fas fa-check"></i> Disponible </span>
+
+        </div>
+    </div>
+</div>

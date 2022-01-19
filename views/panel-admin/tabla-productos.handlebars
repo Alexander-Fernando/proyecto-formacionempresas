@@ -1,0 +1,104 @@
+<div id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        {{> sidebar}}
+        
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                {{!-- {{> navegacion}} --}}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    {{!-- <h1 class="h3 mb-2 text-green-800">Tabla de Productos</h1> --}}
+
+                    <p class="mb-4">Esta tabla muestra el listado de productos que usted haya agregado a su lista de
+                        Productos.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <h6 class="m-2 font-weight-bold text-primary">Productos</h6>
+                                </div>
+                                <div class="col-sm-12 col-md-6 d-flex">
+                                    <div class="ml-auto">
+                                        <a href="/admin/{{id}}/nuevo-producto" class="btn btn-success btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                            <span class="text">Nuevo Producto</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre del Producto</th>
+                                            <th>Fecha creación</th>
+                                            <th>Precio</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                            {{#if productos.length}}
+                                                {{#each productos}}
+                                                <tr class="filaTabla">
+                                                    <td>{{nombreProduc}}</td>
+                                                    <td>{{fechaCreacion}}</td>
+                                                    <td>S/{{precioProduc}}</td>
+                                                    <td>
+                                                        <a href="/admin/{{autor}}/editar-producto/{{urlProduc}}" class="btn btn-success btn-circle btn-sm">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+                                                        <a href="/admin/{{autor}}/eliminar-producto/{{urlProduc}}" class="btn btn-danger btn-circle btn-sm btn-Eliminar">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            {{/each}}
+
+                                        {{else}}
+                                            <tr>
+                                                <td>NO TIENE PRODUCTOS</td>
+                                                <td>NO TIENE PRODUCTOS</td>
+                                                <td>NO TIENE PRODUCTOS</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success btn-circle btn-sm">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {{/if}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+</div>

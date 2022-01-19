@@ -1,0 +1,94 @@
+<div id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        {{> sidebar}}
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                {{!-- {{> navegacion}} --}}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div id="servicio" style="display: block;">
+                        <div class="testbox">
+                  
+
+                          <form 
+                            action="/admin/{{id}}/editar-producto/{{productoEditar.urlProduc}}" method="POST" enctype="multipart/form-data"
+                            class="form-formulario">
+                  
+                            <div class="banner ">
+                              <h1>Editar Producto</h1>
+                            </div>
+                            
+                            <div class="item">
+                                <div>
+                                  <label for="address">Nombre de su Producto<span>*</span></label>
+                                  <input class="input-form" id="address" type="text" name="nombreProduc" value="{{productoEditar.nombreProduc}}" required/>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div>
+                                  <label for="language">Agregue una breve descripción</label>
+                                  <input class="input-form" id="language" type="text" name="descripcionProduc" value="{{productoEditar.descripcionProduc}}" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div>
+                                  <label for="country">Especificaciones del producto</label>
+                                  <input class="input-form" id="country" type="text" name="especificaciones" value="{{productoEditar.especificaciones}}" required/>
+                                </div>
+                            </div>
+                            <div class="item">
+                              <label for="apply">Puntos de venta y/o entrega</label>
+                              <input class="input-form" id="apply" type="text" name="lugarDelivery"  value="{{productoEditar.lugarDelivery}}" required/>
+                            </div>
+
+                            <div class="item">
+                                <label for="LocalVentas">Local de ventas.</label>
+                                <input class="input-form" id="LocalVentas" type="text" name="ubicacion" value="{{productoEditar.ubicacion}}"  required/>
+                            </div>
+
+                            <div class="item">
+                              <label for="Telefono">Teléfono de contacto</label>
+                              <input class="input-form" id="telefono" type="text" name="teleContacto" value="{{productoEditar.teleContacto}}"  required/>
+                            </div>
+                  
+                            <div class="item">
+                              <label for="precio">Precio (Sujeto a cambios)</label>
+                              <input class="input-form" id="precio" type="number" name="precioProduc" value="{{productoEditar.precioProduc}}" required/>
+                            </div>
+                            
+                            
+                            <div class="item">
+                              <label for="picture">Agregue una imagen descriptiva de su producto:</label>
+                              <input class="input-form" id="picture" type="file" name="imgProducto"/>
+                            </div>
+                            
+                            <div>
+                                <button class="btn btn-success"  type="submit">Editar</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+</div>

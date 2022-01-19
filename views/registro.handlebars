@@ -1,0 +1,54 @@
+<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/registro.svg">
+		</div>
+		<div class="login-content">
+			<form action="/registrarse" method="POST">
+				<img src="img/hombre.svg">
+				<h2 class="title">EmprendeSM</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Nombre</h5>
+           		   		<input type="text" name="nombre" class="input" autocomplete="email" required>
+           		   </div>
+           		</div>
+
+                <div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fa fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Correo</h5>
+           		   		<input type="email" name="correo" class="input" autocomplete="email" required>
+           		   </div>
+           		</div>
+
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Contraseña</h5>
+           		    	<input type="password" name="password" class="input" autocomplete="new-password" required>
+            	   </div>
+            	</div>
+
+                <div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Repetir Contraseña</h5>
+           		    	<input type="password" name="confirmar" class="input" autocomplete="new-password" required>
+            	   </div>
+            	</div>
+
+                <a href="/inicio-sesion" class="a">Iniciar Sesión</a>
+            	<input type="submit" class="btn" value="Crear Cuenta">
+            </form>
+        </div>
+    </div>
