@@ -1,7 +1,6 @@
 {
-  "name": "EmprendeSM",
+  "name": "emprendesm",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon app",
@@ -46,5 +45,14 @@
     "nodemon": "^2.0.7",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexander-Fernando/proyecto-formacionempresas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alexander-Fernando/proyecto-formacionempresas/issues"
+  },
+  "homepage": "https://github.com/Alexander-Fernando/proyecto-formacionempresas#readme",
+  "description": ""
 }
